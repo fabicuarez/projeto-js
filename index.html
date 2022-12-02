@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto html toti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div>
+     <header class="header">
+        <nav>
+            <ul class="menu">
+                <li> <a href="#">Apresentação</a><li>
+                <li><a href="#">Estudos e objetivos</a></li>
+                <li> <a href="#">Informações de contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div>
+            <img class="galaxy" src="./assets/galaxy.jpg" alt="Foto de uma galaxia" class="imagem">
+        </div>
+    </section>
+
+    <section class="container">
+    <div class="minha_foto">
+        <img class="perfil" src="./assets/fabi.jpg" alt="Foto do rosto de Fabiana" class="avatar__imagem">
+    </div>
+    
+    <h1 class="meu_nome">Fabiana Cuárez</h1> 
+         <div class="descripcion">
+            <p>Me chamo <b>Fabiana Cuarez</b>, sou Venezuelana, tenho 20 anos e moro no Brasil desde 2017. <br>
+            Sou entusiasta no mundo da tecnologia, visando novas linguagens de programação e tudo que envolve novas
+            descobertas dessa área </p> <br> 
+         </div>
+    </section>
+
+    <section class="conteiner">
+        <div class="experiencia">
+            <h2><hr>
+                    Experiência Profissional
+                </h2>
+                <p>
+                   <strong>Jovem Aprendiz no setor de Arquivo - Nova Rio (1 ano e 3 meses)</strong>
+                <ul class="experiencia">
+                    <li> Responsável por Cadastro de documentos</li>
+                    <li>Organização e logística de documentos gerais</li>
+                    <li>Atendimento ao cliente</li>
+
+                </ul><br> 
+                </p>
+
+                <p>
+                    <strong>Arquivista - Grupo Líder (1 ano e 2 meses) </strong>
+                <ul class="experiencia">
+                    <li>Avaliação de documentações</li>
+                    <li> Classificação de documentos</li>
+                    <li> Atualização cadastral</li>
+                    <li> Análise de competências, funções e atividades dos órgãos produtores de documentos</li>
+                </ul> <br>
+            </p><hr>
+        </div>
+                
+
+        <div class="estudos_objetivos">
+            <hr>
+            <h2>Estudos e objetivos</h2>
+                <h3>
+                    Estudo
+                </h3>
+                <p>Curso Técnico em Administração (Senac-RJ)</p> <br>
+            
+
+                <h3>
+                    Objetivos
+                </h3>
+               <p>
+                Viso uma carreira na área tecnológica, tendo como foco principal a área de Front-end. Buscando
+                desenvolvimento dos meus conhecimentos e crescimento profissional tanto quanto pessoal. </p> 
+            <br> <hr>
+    </section>
+   
+    
+        </div>   
+        </main>
+            
+         <h2 class="contato">Contato</h2>
+         <section>
+            <form>
+            <div class="grupo1">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required> <br>
+                <small id="textEmail"></small>
+           </div>
+
+           <div class="grupo2">
+                <label for="email"><strong>E-mail</strong></label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required> <br>
+
+           </div>
+
+           <div class="grupo3">
+                <label for="assunto"><strong>Assunto</strong></label>
+                <input type="text" name="assunto" id="assunto" placeholder="Digite um assunto" required>
+                <br>
+           </div>
+        
+           <div class="grupo4">
+               
+               <label for="mensagem"><strong>Mensagem</strong></label>
+               <textarea rows="6" style="width: 26em" id="mensagem" name="mensagem" placeholder="Digite uma mensagem"></textarea> 
+            </form>
+           </div>
+           <br>
+           <button class="botao" type="submit" value="enviar">Enviar</button>
+           <small id="Form"></small>
+</div>
+   
+         </section>
+         <div class="instagram">
+             <a href="https://www.instagram.com/fcgc12/" target="_blank">
+                <img src="./assets/insta.jpg" alt="perfil do instagram da Fabiana" width="70"> 
+             </a>
+         </div>
+        <div class="git">
+            <a href="https://github.com/fabicuarez" target="_blank">
+                <img src="./assets/git.jpg" alt="perfil do git da fabiana" width="70">
+            </a>
+        </div>
+
+        <div class="linkedin">
+            <a href="https://www.linkedin.com/in/fabiana-carolina-gonzalez-cuarez-08bb90201/" target="_blank">
+                <img src="./assets/linkedin.jpg" alt="perfil do linkedin da fabiana" width="70">
+            </a>
+        </div>
+
+<div>
+    <script>
+        let email = document.getElementById('email');
+let form = document.querySelector('form');
+let textForm = document.getElementById('textForm')
+let textEmail = document.getElementById('textEmail')
+
+form.addEventListener('submit' , (e) => {
+if(email.value == '' && password.value == '') {
+    textForm.textContent = 'Por favor, preencha todos os campos!!'
+} else {
+    console.log(email.value);
+console.log(password.value);
+}
+
+e.preventDefault()
+
+})
+
+email.addEventListener("keyup", () => {
+if(validatorEmail(email.value) !== true) {
+    textEmail.textContent = "O formato do e-mail deve ser - Ex: fabi@gmail.com"
+} else {
+    textEmail.textContent = ''
+}
+})
+
+function validatorEmail(email) {
+let emailPattern = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+return emailPattern.test(email)
+}
+    </script>
+</div>
+
+</body>
+
+</html>
